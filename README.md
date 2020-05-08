@@ -6,7 +6,7 @@ This Docker image exists because I wanted a way to run the Windows version of th
 
 The image is based on [Element Zero](https://github.com/Element-0/ElementZero) which does most of the heavy lifting with regards to making it work on Linux.  It also provides mod support which I don't really need but it doesn't get in the way either.
 
-Element Zero provides instructions for running in Docker but it has a number of manual installation steps.  This immage automates those steps and makes it easier to mount worlds and config into the image with some well-placed symlinks.
+Element Zero provides instructions for running in Docker but it has a number of manual installation steps.  This image automates those steps and makes it easier to mount worlds and config into the image with some well-placed symlinks.
 
 ## Usage
 
