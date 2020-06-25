@@ -1,7 +1,7 @@
 FROM alpine:3.11.6 AS build
 
-ARG bedrockVersion=1.14.60.5
-ARG elementZeroVersion=200517
+ARG bedrockVersion=1.16.0.2
+ARG elementZeroVersion=200625
 
 ENV bedrockVersion=${bedrockVersion}
 ENV elementZeroVersion=${elementZeroVersion}
