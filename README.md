@@ -29,7 +29,10 @@ services:
     - /path/to/my/worlds:/data/worlds
 ```
 
-In the `/path/to/my/config` folder, place your `server.properties`, `whitelist.json`, and `permissions.json` files.  Original copies of these files can be found in the vanilla [Bedrock Dedicated Server Download](https://www.minecraft.net/en-us/download/server/bedrock/).  The files and directories must be owned by a user:group of 1000:1000.  This is a limitation of the base image that this image builds on.
+Place your configuration files in the `/path/to/my/config` folder.  The files and directories must be owned by a user:group of 1000:1000.  This is a limitation of the base image that this image builds on.  The configuration files include:
+
+* `server.properties`, `whitelist.json`, and `permissions.json` files.  Original copies of these files can be found in the vanilla [Bedrock Dedicated Server Download](https://www.minecraft.net/en-us/download/server/bedrock/).
+* `custom.yaml`.  Details of this file are documented on the [Element Zero Wiki](https://github.com/Element-0/ElementZero/wiki/Configuration).  If it doesn't exist, this file will be created on first startup.
 
 Start the server via docker compose.
 

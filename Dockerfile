@@ -25,9 +25,11 @@ RUN mkdir config && \
     mv server.properties config && \
     mv permissions.json config && \
     mv whitelist.json config && \
+    touch config/custom.yaml && \
     ln -s config/server.properties server.properties && \
     ln -s config/permissions.json permissions.json && \
-    ln -s config/whitelist.json whitelist.json
+    ln -s config/whitelist.json whitelist.json && \
+    ln -s config/custom.yaml custom.yaml
 
 FROM codehz/wine:bdlauncher-runtime
 
