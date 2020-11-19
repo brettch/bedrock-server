@@ -10,14 +10,14 @@ Element Zero provides instructions for running in Docker but it has a number of 
 
 ## Usage
 
-Create a docker-compose.yaml file with the following contents.  Modify `/path/to/my` with the location you want to persist config and world data.
+Create a docker-compose.yaml file with the following contents. This will use a pre-built image stored on Docker Hub. Modify `/path/to/my` with the location you want to persist config and world data.
 
 ```yaml
 version: '2.1'
 
 services:
   minecraft:
-    build: bretth/minecraft-bedrock-zero
+    image: bretth/bedrock-server:1.16.100.04-v0.1.0-6-1
     ports:
       - "19132:19132/udp"
     restart: always
@@ -28,6 +28,8 @@ services:
     - /path/to/my/config:/data/config
     - /path/to/my/worlds:/data/worlds
 ```
+
+To build the image from source, replace `image: ...` with `build: .`.
 
 Place your configuration files in the `/path/to/my/config` folder.  The files and directories must be owned by a user:group of 1000:1000.  This is a limitation of the base image that this image builds on.  The configuration files include:
 
